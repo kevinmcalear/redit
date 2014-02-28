@@ -33,7 +33,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -43,3 +43,21 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Deploying to Heroku
+gem 'rails_12factor'
+
+# Nokogiri
+gem 'nokogiri'
+
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+  gem 'simplecov'
+end
