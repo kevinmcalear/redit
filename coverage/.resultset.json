@@ -1,11 +1,18 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kevinmcalear/dev/redit/app/helpers/application_helper.rb": [
+      "/Users/jenndodd/dev/redit/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jenndodd/dev/redit/app/models/user.rb": [
+        1,
+        1,
+        null,
         1,
         null
       ]
     },
-    "timestamp": 1393613394
+    "timestamp": 1393619586
   }
 }

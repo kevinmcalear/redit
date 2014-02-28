@@ -8,7 +8,18 @@
 </head>
 <body>
 
-<%= yield %>
+  <nav class="nav-bar">
+    <ul>
+      <li>
+        <% form_for @user do |f| %>
+          <%= f.label :name %>
+        <%= link_to "Login", root_path %>
+      </li>
+
+    </ul>
+  </nav>
+
+  <%= yield %>
 
 </body>
 </html>
