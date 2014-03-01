@@ -9,7 +9,16 @@
 <body>
 
   <nav class="nav-bar">
-    <% if session[:user_id].nil? %>
+    <% if logged_in? %>
+        <ul>
+          <li>
+            <%= link_to "Heyo #{current_user.username}" %>
+          </li>
+          <li>
+            <%= link_to "Logout", session_path, method: :delete %>
+          </li>
+        </ul>
+    <% else %>
       <ul>
         <li><%= link_to "Join!", new_user_path %></li>
         <li>
@@ -22,16 +31,6 @@
           <% end %>
         </li>
       </ul>
-    <% else %>
-      <% user = User.find(session[:user_id]) %>
-        <ul>
-          <li>
-            <%= link_to "Heyo #{user.username}" %>
-          </li>
-          <li>
-            <%= link_to "Logout", session_path, method: :delete %>
-          </li>
-        </ul>
     <% end %>
   </nav>
 
