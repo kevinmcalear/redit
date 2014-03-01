@@ -1,0 +1,24 @@
+<%= form_for @user, :html => { :class => "join-form"} do |f| %>
+
+  <div class="label-input">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="label-input">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="label-input">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="label-input">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
+<% end %>

@@ -15,7 +15,7 @@ class SessionController < ApplicationController
 
       # the email/password is wrong!
       @message = "This email and password combination does not exist."
-      render(:new)
+      redirect_to ( root_path )
     end
   end
 

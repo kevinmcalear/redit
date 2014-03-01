@@ -11,13 +11,15 @@
   <nav class="nav-bar">
     <% if session[:user_id].nil? %>
       <ul>
+        <li><%= link_to "Join!", new_user_path %></li>
         <li>
-          <%= form_tag session_path %>
+          <%= form_tag session_path do %>
             <%= label_tag :username %>
             <%= text_field_tag :username %>
             <%= label_tag :password %>
             <%= password_field_tag :password %>
             <%= submit_tag "Login" %>
+          <% end %>
         </li>
       </ul>
     <% else %>
@@ -32,6 +34,15 @@
         </ul>
     <% end %>
   </nav>
+
+  <% unless @message.nil? %>
+    <div id="errors">
+      <h3>Errors!</h3>
+      <ul>
+        <li><em><%= @message %></em></li>
+      </ul>
+    </div>
+  <% end %>
 
   <%= yield %>
 
